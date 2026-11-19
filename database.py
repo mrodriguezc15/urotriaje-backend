@@ -8,7 +8,7 @@ def get_db_connection():
         base_dir = os.path.dirname(os.path.abspath(__file__))
         ca_path = os.path.join(base_dir, "ca.pem")
 
-        # Leemos los datos de conexión desde las variables de entorno (si no existen, usamos los locales)
+        # Leemos los datos de conexión desde las variables de entorno
         conn_params = {
             "host": os.environ.get("DB_HOST", "localhost"),
             "port": int(os.environ.get("DB_PORT", 3306)),
